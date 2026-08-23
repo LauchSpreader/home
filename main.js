@@ -7,7 +7,7 @@ async function checkTor() {
     console.log("checking if onion server is available");
     try {
         const response = await fetch(
-            "http://torsedz565kauwu4duvxduwzpihukecrid2riw5lkyxypunhfmerbmid.onion/",
+            "http://torsedz565kauwu4duvxduwzpihukecrid2riw5lkyxypunhfmerbmid.onion/assets/css/app.css",
             {
                 method: "GET",
                 redirect: "manual"
@@ -17,7 +17,7 @@ async function checkTor() {
         console.log("antwort: ", response.status);
         console.log("typ: ", response.type);
 
-        if (response.status === 200 || response.status === 302) {
+        if (response.status === 200 || response.status === 302 || response.status === 304) {
             console.log("server ist erreichbar");
         } else {
             console.log("server ist nicht erreichbar");
