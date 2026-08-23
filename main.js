@@ -21,7 +21,7 @@ async function checkTor() {
         }
 
     } catch (e) {
-        console.error("anfrage ist fehlgeschlagen: ", error);
+        console.error("anfrage ist fehlgeschlagen: ", e);
     }
 }
 
