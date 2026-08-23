@@ -9,7 +9,8 @@ async function checkTor() {
         const response = await fetch(
             "http://torsedz565kauwu4duvxduwzpihukecrid2riw5lkyxypunhfmerbmid.onion/",
             {
-                method: "HEAD",
+                method: "GET",
+                redirect: "manual"
             }
         );
 
@@ -28,3 +29,8 @@ async function checkTor() {
 }
 
 checkTor();
+
+
+function detectTor() {
+    console.log("server ist erreichbar");
+}
