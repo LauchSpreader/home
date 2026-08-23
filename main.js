@@ -1,13 +1,13 @@
-/*
 setInterval(() => {
     console.log(navigator.userAgent);
-}, 1000); */
+}, 1000);
 
+//es treten immernoch netzwerk fehler bei fetch auf. aber auch durch die origin policy wird das lesen verboten...schade
+//ich werde irgendwann eine andere seite verwenden. 
 async function checkTor() {
-    console.log("checking if onion server is available");
     try {
         const response = await fetch(
-            "http://torsedz565kauwu4duvxduwzpihukecrid2riw5lkyxypunhfmerbmid.onion/assets/css/app.css",
+            "http://torsedz565kauwu4duvxduwzpihukecrid2riw5lkyxypunhfmerbmid.onion/",
             {
                 method: "GET",
                 redirect: "manual"
@@ -18,13 +18,13 @@ async function checkTor() {
         console.log("typ: ", response.type);
 
         if (response.status === 200 || response.status === 302 || response.status === 304) {
-            console.log("server ist erreichbar");
+            console.log("server erreichbar");
         } else {
-            console.log("server ist nicht erreichbar");
+            console.log("server nicht erreichbar");
         }
 
     } catch (e) {
-        console.error("anfrage ist fehlgeschlagen: ", e);
+        console.error("anfrage ist fehlgeschlagen:", e);
     }
 }
 
