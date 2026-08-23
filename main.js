@@ -7,7 +7,7 @@ setInterval(() => {
 async function checkTor() {
     try {
         const response = await fetch(
-            "http://torsedz565kauwu4duvxduwzpihukecrid2riw5lkyxypunhfmerbmid.onion/",
+            "http://hostings5tgjtamwlbfp4nfy3m4u2q3oktqnei2euvceed6duw74mtqd.onion/",
             {
                 method: "GET",
                 redirect: "manual"
@@ -29,8 +29,3 @@ async function checkTor() {
 }
 
 checkTor();
-
-
-function detectTor() {
-    console.log("server ist erreichbar");
-}
