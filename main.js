@@ -3,25 +3,25 @@ setInterval(() => {
 }, 1000);
 
 async function checkTor() {
+    console.log("checking if onion server is available");
     try {
         const response = await fetch(
             "http://torsedz565kauwu4duvxduwzpihukecrid2riw5lkyxypunhfmerbmid.onion/",
             {
-                method: "POST",
-                body: "test"
+                method: "GET"
             }
         );
 
+        console.log("antwort: ", response.status);
+
         if (response.status === 200) {
             console.log("server ist erreichbar");
-            return true;
+        } else {
+            console.log("server ist nicht erreichbar");
         }
 
-        console.log("server antwortet mit: ", response.status);
-        return false;
     } catch (e) {
-        console.log("server ist nicht erreichbar");
-        return false;
+        console.error("anfrage ist fehlgeschlagen: ", error);
     }
 }
 
