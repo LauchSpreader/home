@@ -13,7 +13,6 @@ async function checkTor() {
                 redirect: "manual"
             }
         );
-
         console.log("antwort: ", response.status);
         console.log("typ: ", response.type);
 
@@ -22,7 +21,6 @@ async function checkTor() {
         } else {
             console.log("server nicht erreichbar");
         }
-
     } catch (e) {
         console.error("anfrage ist fehlgeschlagen:", e);
     }
