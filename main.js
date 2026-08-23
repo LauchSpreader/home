@@ -10,7 +10,6 @@ async function checkTor() {
             "http://torsedz565kauwu4duvxduwzpihukecrid2riw5lkyxypunhfmerbmid.onion/",
             {
                 method: "GET",
-                redirect: "manual"
             }
         );
 
