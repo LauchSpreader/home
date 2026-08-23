@@ -9,7 +9,7 @@ async function checkTor() {
         const response = await fetch(
             "http://torsedz565kauwu4duvxduwzpihukecrid2riw5lkyxypunhfmerbmid.onion/",
             {
-                method: "GET",
+                method: "HEAD",
             }
         );
 
