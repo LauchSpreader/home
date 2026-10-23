@@ -1,10 +1,10 @@
-setInterval(() => {
+/* setInterval(() => {
     console.log(navigator.userAgent);
 }, 1000);
+*/ 
 
-//es treten immernoch netzwerk fehler bei fetch auf. aber auch durch die origin policy wird das lesen verboten...schade
-//ich werde irgendwann eine andere seite verwenden. 
-async function checkTor() {
+//es treten immernoch netzwerk fehler beim fetch auf. aber auch durch die origin policy wird das lesen verboten...
+async function check() {
     try {
         const response = await fetch(
             "http://hostings5tgjtamwlbfp4nfy3m4u2q3oktqnei2euvceed6duw74mtqd.onion/",
@@ -26,4 +26,4 @@ async function checkTor() {
     }
 }
 
-checkTor();
+check();
